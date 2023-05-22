@@ -9,7 +9,7 @@ tasks and help them to complete it by minimising distractions
 
 <h4>Primary outcomes;</h4>
 
-- Enable users to complete tasks in focused sprints 
+- Enable users to complete tasks in focused sprints  
 
 - Reduce the amount of wasted time (procastination)
 
