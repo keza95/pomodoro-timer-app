@@ -1,0 +1,2 @@
+# This folder contains the microservice that handles notifications and reminders for the Pomodoro timer application.
+# It can send notifications to users based on their preferences, such as session start reminders or break end alerts.

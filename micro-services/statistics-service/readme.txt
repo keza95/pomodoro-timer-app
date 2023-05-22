@@ -1,0 +1,2 @@
+# This folder contains the microservice responsible for collecting and processing statistics related to Pomodoro sessions.
+# It tracks data such as completed sessions, session duration, and user productivity.
