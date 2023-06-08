@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <title>Pomodoro Timer</title>
+  <title>Pomodoro Timer</title>
   <link rel="stylesheet" type="text/css" href="static/css/styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
+
 <body>
   <div class="container" id="pomo-container">
     <h1 class="text-center">Pomodoro Timer</h1>
     <div class="row justify-content-center">
       <div class="col-6 text-center">
-        <h2 class="timer">25:00</h2>
+        <h2 id="timer" class="timer">25:00</h2>
         <h3 id="interval">5:00</h3>
         <div class="btn-group mt-3">
           <button id="start" class="btn btn-success">Start</button>
@@ -20,13 +22,11 @@
       </div>
     </div>
   </div>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script>
-
-
-
     var timerDisplay = document.getElementById('timer');
     var startButton = document.getElementById('start');
     var pauseButton = document.getElementById('pause');
@@ -45,7 +45,18 @@
       timer = setInterval(function() {
         if (minutes === 0 && seconds === 0) {
           clearInterval(timer);
-          // TODO: Implement behavior when timer ends
+          // TODO: Implement confetti animation
+            var confettiSettings = {
+            target: 'pomo-container',
+            max: 150,
+            size: 1,
+            animate: true,
+            props: ['circle', 'square', 'triangle', 'line'],
+            colors: [[165,104,246],[230,61,135],[0,199,228],[253,214,126],[255,106,106]]
+          };
+          var confetti = new ConfettiGenerator(confettiSettings);
+          confetti.render();
+          return;
           return;
         }
         if (seconds === 0) {
@@ -79,6 +90,6 @@
     pauseButton.addEventListener('click', pauseTimer);
     resetButton.addEventListener('click', resetTimer);
   </script>
-
 </body>
+
 </html>

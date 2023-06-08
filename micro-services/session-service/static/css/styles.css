@@ -1,3 +1,16 @@
-.timer {
-    color: green;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #ffbf80, #ff6666);
 }
+
+.pomodoro-container {
+  text-align: center;
+}
+
+.timer {
+  font-size: 150px;
+}
+
