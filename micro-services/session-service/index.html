@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" type="text/css" href="static/css/styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="pomo-container">
     <h1 class="text-center">Pomodoro Timer</h1>
     <div class="row justify-content-center">
       <div class="col-6 text-center">
-        <h2 id="timer">25:00</h2>
+        <h2 class="timer">25:00</h2>
         <h3 id="interval">5:00</h3>
         <div class="btn-group mt-3">
           <button id="start" class="btn btn-success">Start</button>
@@ -23,6 +24,9 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script>
+
+
+
     var timerDisplay = document.getElementById('timer');
     var startButton = document.getElementById('start');
     var pauseButton = document.getElementById('pause');
