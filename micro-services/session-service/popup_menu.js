@@ -9,6 +9,8 @@ $(document).ready(function () {
     var customizationContent = $('#customization-content');
     var viewContent = $('#view-content');
 
+    popupMenu.hide()
+
     // Function to open the menu
     function openMenu() {
         popupMenu.show();
@@ -18,6 +20,8 @@ $(document).ready(function () {
     function closeMenu() {
         popupMenu.hide();
     }
+
+
 
     // Function to switch to customization section
     function switchToCustomization() {

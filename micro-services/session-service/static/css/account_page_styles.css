@@ -7,6 +7,11 @@ h1 {
     text-align: center;
 }
 
+body {
+
+    background: linear-gradient(45deg, #ffbf80, #ff6666);
+}
+
 .nav-tabs {
     margin-top: 20px;
 }
