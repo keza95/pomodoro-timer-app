@@ -70,15 +70,38 @@ resetButton.addEventListener('click', resetTimer);
 var fullscreenIcon = document.querySelector('.fullscreen-icon');
 
 function toggleFullScreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
     }
-  }
 }
 
 fullscreenIcon.addEventListener('click', toggleFullScreen);
 
 // FUNCTION: Toggle Menu Popover
+      $(document).ready(function () {
+        var hamburgerIcon = $('#hamburger-icon');
+        var popupMenu = $('#popup-menu');
+
+        // Function to open the menu
+        function openMenu() {
+          popupMenu.show();
+        }
+
+        // Function to close the menu
+        function closeMenu() {
+          popupMenu.hide();
+        }
+
+        // Attach event handler to hamburger icon
+        hamburgerIcon.click(openMenu);
+        popupMenu.click(function (event) {
+          if (event.target === popupMenu[0]) {
+            closeMenu();
+          }
+        });
+      });
+

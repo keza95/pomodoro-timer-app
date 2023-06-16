@@ -6,14 +6,19 @@
   <link rel="stylesheet" type="text/css" href="static/css/styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
-<nav>
-  <label for="title" id="title"></label>
-</nav>
+
 <body>
   <div class="container" id="pomo-container">
-    <i class="fas fa-bars fa-2x hamburger-menu"></i>
-    <i class="fas fa-user fa-2x account-icon"></i>
+    <i class="fas fa-bars fa-2x hamburger-menu" data-toggle="popover" data-placement="bottom"
+      title="Navigation Menu" data-html="true" data-content='
+      <a href="account_settings.html" class="popover-link">Account Settings</a>
+      <a href="logout.html" class="popover-link">Logout</a>'></i>
+    <a href="account_settings.html">
+      <i class="fas fa-user fa-2x account-icon"></i>
+    </a>
+
     <h1 class="text-center">Pomodoro Timer</h1>
     <div class="row justify-content-center">
       <div class="col-6 text-center">
@@ -28,10 +33,10 @@
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
 
 </body>
 
