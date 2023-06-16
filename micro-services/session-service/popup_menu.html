@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Pop-up Menu Example</title>
+  <link rel="stylesheet" href="static/css/popup_menu.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+  <button id="open-menu-btn" class="btn btn-primary">Open Menu</button>
+
+  <div id="popup-menu" class="popup-menu">
+    <div class="menu-content">
+      <div class="row">
+        <div class="col-md-4">
+          <button id="customization-btn" class="btn btn-link">Customization</button>
+        </div>
+        <div class="col-md-4">
+          <button id="view-btn" class="btn btn-link">View</button>
+        </div>
+        <div class="col-md-4">
+          <button id="logout-btn" class="btn btn-link">Logout</button>
+          <button id="login-btn" class="btn btn-link">Login</button>
+        </div>
+      </div>
+
+      <hr>
+
+      <h4 id="section-title" class="text-center mb-3">Header Title</h4>
+
+      <div id="customization-content" class="section-content">
+        <p>Customization content goes here.</p>
+      </div>
+
+      <div id="view-content" class="section-content">
+        <p>View content goes here.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="popup_menu.js"></script>
+</body>
+
+</html>
