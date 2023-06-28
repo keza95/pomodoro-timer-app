@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pomodoro App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Welcome, {{ session['username'] }}!</h1>
+    <p class="text-center">User ID: {{ user_id }}</p>
+    <h2 class="text-center">Pomodoro Timer</h2>
+    <div class="text-center">
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
