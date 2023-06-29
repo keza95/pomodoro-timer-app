@@ -36,6 +36,10 @@ function startTimer() {
       toggleButton.textContent = 'Start';
       toggleButton.className = 'btn btn-success';
       isRunning = false;
+
+      // Play timer bell sound
+      var timerBell = document.getElementById('timer-bell');
+      timerBell.play();
     } else if (seconds === 0) {
       minutes--;
       seconds = 59;
@@ -44,6 +48,7 @@ function startTimer() {
     }
     updateTimer();
   }, 1000);
+
   toggleButton.textContent = 'Pause';
   toggleButton.className = 'btn btn-primary';
   isRunning = true;
