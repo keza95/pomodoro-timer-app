@@ -1,83 +1,136 @@
+/* Navigation Bar */
 nav {
-
+  /* Add your navigation bar styles here */
 }
 
+/* Body */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(45deg, #ffbf80, #ff6666);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #ffbf80, #ff6666);
 }
 
+/* Timer Buttons */
+.btn-start,
+.btn-reset {
+  padding: 10px 20px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
 
-/*TODO: Change UI for buttons*/
+.btn-start {
+  background-color: white;
+  color: #fff;
+  border: none;
+}
 
-    .btn-start,
-    .btn-reset {
-      padding: 10px 20px;
-      font-size: 2.2rem;
-      font-weight: bold;
-      border-radius: 5px;
-    }
+.btn-start:hover {
+  background-color: #4cae4c;
+}
 
-    .btn-start {
-      background-color: white;
-      color: #fff;
-      border: none;
-    }
+.btn-reset {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+}
 
-    .btn-start:hover {
-      background-color: #4cae4c;
-    }
+.btn-reset:hover {
+  background-color: #c9302c;
+}
 
-    .btn-reset {
-      background-color: #d9534f;
-      color: #fff;
-      border: none;
-    }
-
-    .btn-reset:hover {
-      background-color: #c9302c;
-    }
-
-
+/* Hamburger Menu */
 .hamburger-menu {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 999;
-    color: #000;
-    cursor: pointer;
-}
-
-.hamburger-menu:hover {
-
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  color: #000;
+  cursor: pointer;
 }
 
 .account-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 999;
-    color: #000;
-    cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  color: #000;
+  cursor: pointer;
 }
 
+/* Pomodoro Container */
 .pomodoro-container {
-    text-align: center;
+  text-align: center;
+  align-content: center;
 }
 
 .timer {
-    font-size: 150px;
+  font-size: 20vw;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
-.fullscreen-icon {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    z-index: 999;
-    color: #000;
-    cursor: pointer;
+.row {
+  justify-content: space-between;
 }
+
+
+.fullscreen-icon {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+  color: #000;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  background-color: #f6845b;
+}
+
+#add-task {
+  background-color: #2f2d2d;
+  color: #da5151;
+}
+
+#task-list {
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 0 25% 0 25%;
+}
+
+.list-group-item {
+  background: linear-gradient(90deg, #ffbf80, #ff6666);;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-name {
+  flex: 1;
+}
+
+.task-buttons {
+  display: flex;
+}
+
+.edit-task,
+.delete-task {
+  margin-left: 10px;
+}
+
+
+
+
+
+/* Popup Menu */
+.popup-menu {
+  /* Add your popup menu styles here */
+}
+
 
