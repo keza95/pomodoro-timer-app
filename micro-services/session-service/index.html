@@ -2,73 +2,93 @@
 <html lang="en">
 
 <head>
-  <title>Pomodoro Timer</title>
-  <link rel="stylesheet" type="text/css" href="static/css/styles.css">
-  <link rel="stylesheet" type="text/css" href="static/css/popup_menu.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="static/css/popup_menu.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <audio id="timer-bell">
+        <source src="static/audio/alarm.mp3" type="audio/mpeg">
+    </audio>
+
 </head>
 
 <body>
-  <div class="container" id="pomo-container">
+<div class="container" id="pomo-container">
     <i id="hamburger-icon" class="fas fa-bars fa-2x hamburger-menu" data-toggle="popover" data-placement="bottom"
-      title="Navigation Menu" data-html="true" data-content='
+       title="Navigation Menu" data-html="true" data-content='
       <a href="account_settings.html" class="popover-link">Account Settings</a>
       <a href="logout.html" class="popover-link">Logout</a>'></i>
-    <a href="account_settings.html">
-      <i class="fas fa-user fa-2x account-icon"></i>
+    <a href="settings.html">
+        <i class="fas fa-user fa-2x account-icon"></i>
     </a>
 
-    <h1 class="text-center">Pomodoro Timer</h1>
+    <h1 id="current-task" class="text-center">Pomodoro Timer</h1>
     <div class="row justify-content-center">
-      <div class="col-6 text-center">
-        <h2 id="timer" class="timer">25:00</h2>
-        <h3 id="interval">5:00</h3>
-        <div class="btn-group mt-3">
-          <button id="toggle" class="btn btn-start">Start</button>
-          <button id="reset" class="btn btn-reset">Reset</button>
+        <div class="col-6 text-center">
+            <h2 id="timer" class="timer">25:00</h2>
+            <h3 id="interval">5:00</h3>
+            <div class="btn-group mt-3">
+                <button id="toggle" class="btn btn-start">Start</button>
+                <button id="reset" class="btn btn-reset">Reset</button>
+            </div>
         </div>
-      </div>
-      <i class="fas fa-expand fa-2x fullscreen-icon"></i>
+        <i class="fas fa-expand fa-2x fullscreen-icon"></i>
     </div>
 
+    <!-- Task Input -->
+    <div class="row justify-content-center mt-5">
+        <div class="col-6">
+            <div class="input-group">
+                <input id="task-input" type="text" class="form-control" placeholder="Enter task name"/>
+                <div class="input-group-append">
+                    <button id="add-task" class="btn btn-primary">Add Task</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!--    Popup Menu    -->
+    <!-- Task List -->
+    <ul id="task-list" class="list-group mt-3"></ul>
+
+    <!--    Popup Menu    -->
 
     <div id="popup-menu" class="popup-menu">
-      <div class="menu-content">
-        <div class="row">
-          <div class="col-md-4">
-            <button id="customization-btn" class="btn btn-link">Customization</button>
-          </div>
-          <div class="col-md-4">
-            <button id="view-btn" class="btn btn-link">View</button>
-          </div>
-          <div class="col-md-4">
-            <button id="logout-btn" class="btn btn-link">Logout</button>
-            <button id="login-btn" class="btn btn-link">Login</button>
-          </div>
+        <div class="menu-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <button id="customization-btn" class="btn btn-link">Customization</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="view-btn" class="btn btn-link">View</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="logout-btn" class="btn btn-link">Logout</button>
+                    <button id="login-btn" class="btn btn-link">Login</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <h4 id="section-title" class="text-center mb-3">Header Title</h4>
+
+            <div id="customization-content" class="section-content">
+                <p>This is where the customise timers will be displayed.</p>
+            </div>
+
+            <div id="view-content" class="section-content">
+                <p>View content goes here</p>
+            </div>
         </div>
-
-        <hr>
-
-        <h4 id="section-title" class="text-center mb-3">Header Title</h4>
-
-        <div id="customization-content" class="section-content">
-          <p>This is where the customise timers will be displayed.</p>
-        </div>
-
-        <div id="view-content" class="section-content">
-          <p>View content goes here</p>
-                  </div>
-      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="index.js"></script>
     <script src="popup_menu.js"></script>
-  </div>
+
+
+</div>
 </body>
 
 </html>
