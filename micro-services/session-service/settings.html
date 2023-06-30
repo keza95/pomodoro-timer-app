@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Account Settings</title>
+    <link rel="stylesheet" type="text/css" href="static/css/settings.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+<!-- Back button -->
+<a href="index.html" class="back-button">&#8592;</a>
+<div class="container">
+
+    <div class="profile-section">
+        <div class="profile-picture">
+            <img src="profile_picture.jpeg" alt="Profile Picture">
+        </div>
+        <div class="profile-details">
+            <h3 class="profile-name">John Doe</h3>
+            <p class="profile-email">johndoe@example.com</p>
+        </div>
+    </div>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" id="myTabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="dashboard-tab" data-toggle="tab" href="#dashboard" role="tab"
+               aria-controls="dashboard" aria-selected="true">Dashboard</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="account-tab" data-toggle="tab" href="#account-info" role="tab"
+               aria-controls="username" aria-selected="false">Account Info</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="other-tab" data-toggle="tab" href="#other" role="tab"
+               aria-controls="contact" aria-selected="false">Other</a>
+        </li>
+    </ul>
+
+    <!-- Tab content -->
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+
+            <h2 class="section-title">Dashboard:</h2>
+            <div class="graph-section">
+                <h3 class="graph-title">Statistics</h3>
+                <div class="graph-container">
+                    <!-- Dummy data graph goes here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="account-info" role="tabpanel" aria-labelledby="account-info-tab">
+            <h2 class="section-title">Your Information:</h2>
+              <div class="container account-container">
+    <div class="settings-section">
+      <h2 class="section-title">Account Settings</h2>
+      <div class="settings-list">
+        <ul>
+          <li>
+            <i class="fas fa-user"></i>
+            <span class="setting-label">Username</span>
+            <span class="setting-value">johndoe</span>
+            <button class="edit-button">Edit</button>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <span class="setting-label">Email</span>
+            <span class="setting-value">johndoe@example.com</span>
+            <button class="edit-button">Edit</button>
+          </li>
+          <li>
+            <i class="fas fa-key"></i>
+            <span class="setting-label">Password</span>
+            <span class="setting-value">********</span>
+            <button class="edit-button">Change</button>
+          </li>
+          <li>
+            <i class="fas fa-language"></i>
+            <span class="setting-label">Language</span>
+            <span class="setting-value">English</span>
+            <button class="edit-button">Change</button>
+          </li>
+          <li>
+            <i class="fas fa-flag"></i>
+            <span class="setting-label">Country</span>
+            <span class="setting-value">United States</span>
+            <button class="edit-button">Change</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="logout-section">
+      <button class="logout-button">Logout</button>
+    </div>
+  </div>
+        </div>
+
+        <div class="tab-pane fade" id="other" role="tabpanel" aria-labelledby="other-tab">
+            <h2 class="section-title">Other</h2>
+            <!--Include other important info here-->
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

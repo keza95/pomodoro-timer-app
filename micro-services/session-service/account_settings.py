@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('account_settings.html')
+    return render_template('account_info.html')
 
 
 @app.route('/update_email')
